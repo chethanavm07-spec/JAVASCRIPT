@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <span>Thiranex</span>
+        <small>SKILL DEVELOPMENT & FUTURE TECH</small>
+    </div>
+
+    <button class="refresh-btn" onclick="location.reload()">↻</button>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+<div id="menu" class="menu">
+    <a href="#">Dashboard</a>
+    <a href="#">Tasks</a>
+    <a href="#">Profile</a>
+    <a href="#">Logout</a>
+</div>
+
+
+<main class="container">
+
+    <div class="app-card">
+
+        <h1>JavaScript Task Manager</h1>
+
+        <!-- Add Task -->
+        <div class="add-section">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+            >
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+
+        </div>
+
+
+        <!-- Filters -->
+        <div class="filters">
+
+            <button
+                class="filter active"
+                onclick="setFilter('all', this)">
+                All
+            </button>
+
+            <button
+                class="filter"
+                onclick="setFilter('active', this)">
+                Active
+            </button>
+
+            <button
+                class="filter"
+                onclick="setFilter('completed', this)">
+                Completed
+            </button>
+
+        </div>
+
+
+        <!-- Task list -->
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage" class="empty">
+            No tasks available.
+        </p>
+
+    </div>
+
+
+    <!-- Task information -->
+    <section class="info-card">
+
+        <h2>JavaScript Logic & State Management</h2>
+
+        <p>
+            This application demonstrates DOM manipulation,
+            event handling, CRUD operations and browser
+            localStorage.
+        </p>
+
+        <div class="features">
+
+            <h3>Key Features:</h3>
+
+            <ul>
+                <li>Create new tasks</li>
+                <li>Read and display tasks</li>
+                <li>Update task status</li>
+                <li>Delete tasks</li>
+                <li>Filter All, Active and Completed</li>
+                <li>Save tasks using localStorage</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    System developed and maintained by
+    <strong>Team Emoji (emoji.in)</strong>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
